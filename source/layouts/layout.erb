@@ -18,14 +18,55 @@
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-
+    <link href='http://fonts.googleapis.com/css?family=Rufina:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
   </head>
 
   <body class="<%= page_classes %>">
 
+    <section id="nav">
+      <div class="stripes">
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+      </div>
+      <div class="container">
+        <% link_to '/', :class=>'siteid' do %>
+          <h2>
+            R<span>obert</span> G. S<span>alazar</span> M.D.
+          </h2>
+          <h3>Pain Consultant</h3>
+        <% end %>
+        <section class="cta">
+          <h5>559-432-6807</h5>         
+          <%= link_to 'Contact', 'contact', :class=>'button' %>
+          <%= link_to 'Become a Patient', 'patient-info', :class=>'button button-primary' %>
+        </section>
+      </div>
+      <nav>
+        <div class="container">
+          <ul>
+            <li><%= link_to 'Services', 'services' %></li>
+            <li class="sub">
+              <%= link_to 'About', 'about' %>
+              <ul>
+                <li><%= link_to 'William Salazar', 'salazar' %></li>
+                <li><%= link_to 'Robert Johncox', 'johncox' %></li>
+              </ul>
+            </li>
+            <li><%= link_to 'Location', 'location' %></li>
+          </ul>
+        </div>
+      </nav>
+    </section>
     <%= yield %>
+    <footer>
+      <div class="container">
+        <div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+      </div>
+    </footer>
 
-    <div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
   </body>
 </html>
