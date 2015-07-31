@@ -1,2 +1,2 @@
+//= require zepto
 //= require_tree .
-//= require jquery
