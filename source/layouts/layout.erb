@@ -23,7 +23,10 @@
   </head>
 
   <body class="<%= page_classes %>">
-
+    <!-- 
+    NAVIGATION
+    ////////////////////////////////////////////////////////////////////
+    -->
     <section id="nav">
       <div class="stripes">
         <div>&nbsp;</div>
@@ -46,22 +49,38 @@
         </section>
       </div>
       <nav>
+        <i id="toggleMenu" class="fa fa-bars"></i>
         <div class="container">
           <ul>
             <li><%= link_to 'Services', 'services' %></li>
+            <li><%= link_to 'Our Location', 'location' %></li>
             <li class="sub">
-              <%= link_to 'About', 'about' %>
+              <%= link_to 'About us', 'about' %>
               <ul>
                 <li><%= link_to 'William Salazar', 'salazar' %></li>
                 <li><%= link_to 'Robert Johncox', 'johncox' %></li>
               </ul>
             </li>
-            <li><%= link_to 'Location', 'location' %></li>
+            <li class="sub">
+              <%= link_to 'Get Started', 'patient-info' %>
+              <ul>
+                <li><%= link_to 'Patient Info', 'patient-info' %></li>
+                <li><%= link_to 'Contact Us', 'contact' %></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </nav>
     </section>
+    <!-- 
+    PAGE CONTENT 
+    ////////////////////////////////////////////////////////////////////
+    -->
     <%= yield %>
+    <!-- 
+    FOOTER 
+    ////////////////////////////////////////////////////////////////////
+    -->
     <footer>
       <div class="container">
         <div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
