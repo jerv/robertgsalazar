@@ -152,10 +152,10 @@
 						display: block;
 						margin:0;
 						&:first-of-type a {
-							box-shadow:0 3px rgba(100,100,100,0.1) inset;
+							box-shadow:0 3px rgba(100,100,100,0.1) inset, 0 -0.5px rgba(100,100,100,0.1) inset;
 						}
-						&:nth-child(even) a {
-							box-shadow:0 1px rgba(100,100,100,0.1) inset, 0 -0.5px rgba(100, 100, 100, 0.1) inset;
+						&:last-of-type a {
+							box-shadow: none;
 						}
 						a {
 							text-transform: none;
@@ -164,6 +164,7 @@
 							overflow: hidden;
 							text-overflow: ellipsis;
 							white-space: nowrap;
+							box-shadow: 0 -0.5px rgba(100,100,100,0.1) inset;
 							&:hover {
 								background-color: #f5f5f5;
 							}
