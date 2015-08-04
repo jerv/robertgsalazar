@@ -2,6 +2,11 @@
 	background-color: $beige;
 	position: relative;
 	margin-bottom: 45px;
+	@media (max-width: 992px) {
+		& > .container {
+			position: relative;
+		}
+	}
 	@media (max-width: 768px) {
 		& > .container {
 			padding: 0 25px;
