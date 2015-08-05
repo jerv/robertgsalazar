@@ -6,3 +6,44 @@
 		margin:0 0 15px 0;
 	}
 }
+
+.h-services {
+	img {
+		opacity: 0.3;
+	}
+}
+
+.h-location {
+	background: $purple;
+	color: #fff;
+	img:first-of-type {
+		margin-bottom: 10px;
+	}
+	.col-xs-12 {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.col-xs-6 {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	@media (min-width:750px) {
+		h4 {
+			margin-top: 30px;
+		}
+	}
+	h6 {
+		margin-top: 25px;
+		@media (min-width:750px) {
+			margin-top: 65px;
+		}
+	}
+	.button {
+		color: #fff;
+	}
+}
+
+.h-about {
+	box-shadow:0 4px 12px rgba(0,0,0,0.1) inset;
+	background: $beige;
+}
