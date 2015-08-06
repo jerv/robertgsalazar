@@ -6,7 +6,7 @@
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>ROBERT G. SALAZAR, M.D., INC.</title>
@@ -75,41 +75,42 @@
     PAGE CONTENT 
     ////////////////////////////////////////////////////////////////////
     -->
-    <div class="hero">
-	<div class="u-screen-white">
-		<div class="container">
-			<div class="col-xs-12 col-md-6 col-md-offset-3">
-				<h1>Board Certified in Anesthesiology and Pain Management.</h1>
-				<p>
-					We provide compassionate commitment to the management and treatment of pain and endow hope to those who are rendered helpless by pain.
-				</p>
+    <div id="js-parallax-window" class="parallax-window hero">
+	<div class="parallax-static-content">
+		<div class="u-screen-white">
+			<div class="container">
+				<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<h1>Board Certified in Anesthesiology<br> &amp; Pain Management.</h1>
+					<p>
+						We provide compassionate commitment to the management and treatment of pain and endow hope to those who are rendered helpless by pain.
+					</p>
+				</div>
 			</div>
 		</div>
-	</div>
+  </div>
+  <div id="js-parallax-background" class="parallax-background"></div>
 </div>
 
 <div class="h-services padding-lg">
 	<div class="container">
-		<div class="col-xs-12 col-sm-7">
-			<h5>"Intrathecal therapy is the most powerful therapy there is."</h5>
+		<div class="col-xs-12 col-md-7">
+			<h2>Intrathecal therapy is the most powerful therapy there is.</h2>
+		</div>
+		<div class="col-xs-12 col-md-5">
 			<h6 class="sans">We offer:</h6>
 			<ul>
-				<li>Intrathecal pump implantation and management</li>
-				<li>Spinal cord stimulators</li> 
-				<li>Epidurals &amp; facets</li>
+				<li>Intrathecal pump implantation and management.</li>
+				<li>Spinal cord stimulators.</li> 
+				<li>Epidurals &amp; facets.</li>
 			</ul>
 			<a class="button" href="neuromodulation-therapy">More about Neuromodulation Therapy</a>
-			
-		</div>
-		<div class="col-xs-12 col-sm-5">
-			<img class="u-centered" src="images/icons/large/heart.png" />
 		</div>
 	</div>
 </div>
 
 <div class="h-location padding-lg">
 	<div class="container">
-		<div class="col-xs-12 col-sm-3">
+		<div class="col-xs-12 col-sm-3 images">
 			<div class="row">
 				<div class="col-xs-12">
 					<img src="images/location/1-s.jpg" />
@@ -146,28 +147,91 @@
 	</div>
 </div>
 
-<div class="h-services padding-lg">
+<div class="h-cta padding-lg">
 	<div class="container">
 		<div class="col-xs-12 col-sm-7">
 			<h5>"I will never tell you; there isn’t anything I can do for you."</h5>
 			<p>
 				Dr. Salazar has been “on call” since 1993 every day, “rain or shine,” even on nights, weekends, and holidays since the beginning of his practice until today.
 			</p>
-			<a class="button button-primary" href="patient info">Become a patient</a>
+			<a class="button button-primary" href="patient-info">Become a patient</a>
+			<a class="button" href="contact">Contact us</a>
 			
 		</div>
 		<div class="col-xs-12 col-sm-5">
-			<img class="u-centered" src="images/icons/large/medical.png" />
+			<img class="u-centered" src="images/icons/large/heart.png" />
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+	  if ($("#js-parallax-window").length) {
+	    parallax();
+	  }
+	});
+
+	$(window).scroll(function(e) {
+	  if ($("#js-parallax-window").length) {
+	    parallax();
+	  }
+	});
+
+	function parallax(){
+	  if( $("#js-parallax-window").length > 0 ) {
+	    var plxBackground = $("#js-parallax-background");
+	    var plxWindow = $("#js-parallax-window");
+
+	    var plxWindowTopToPageTop = $(plxWindow).offset().top;
+	    var windowTopToPageTop = $(window).scrollTop();
+	    var plxWindowTopToWindowTop = plxWindowTopToPageTop - windowTopToPageTop;
+
+	    var plxBackgroundTopToPageTop = $(plxBackground).offset().top;
+	    var windowInnerHeight = window.innerHeight;
+	    var plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
+	    var plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
+	    var plxSpeed = 0.35;
+
+	    plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
+	  }
+	}
+
+</script>
     <!-- 
     FOOTER 
     ////////////////////////////////////////////////////////////////////
     -->
     <footer>
       <div class="container">
-        <div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+        <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <h5><a href="about">About us</a></h5>
+            <ul>
+              <li><a href="salazar">William Salazar</a></li>
+              <li><a href="johncox">Robert Johncox</a></li>
+              <li><a href="american-institute-of-toxicology">AIT Laboratories</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <h5>Info</h5>
+            <ul>
+              <li><a href="neuromodulation-therapy">Neuromodulation Therapy</a></li>
+              <li><a href="location">Our Location</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <h5><a href="patient-info">Get Started</a></h5>
+            <ul>
+              <li><a href="patient-info">Patient Info</a></li>
+              <li><a href="contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12">
+            <div class="muted">
+              Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
 
