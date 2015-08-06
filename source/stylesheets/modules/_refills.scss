@@ -26,3 +26,82 @@ $parallax-background-height: $parallax-window-height * 2;
 }
 
 // Based on http://codepen.io/skeurentjes/
+
+#map_canvas {
+  height: 220px;
+  width: 100%;
+  @media (min-width:768px) {
+    height: 320px;
+  }
+}
+
+#map_canvas img { 
+  max-width: none; // to prevent UI control bug
+}
+
+#map_canvas .content {
+  padding: 0 0.5em 1em 0.5em;
+}
+
+#map_canvas .firstHeading {
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: bold;
+  margin: 0;
+}
+
+#map_canvas #bodyContent p {
+  font-size: 1em;
+  margin: 0;
+}
+
+.stats {
+  $base-spacing: 1.5em !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
+  $action-color: #477dca !default;
+  $stats-color: lighten($action-color, 10%);
+
+  margin-top: -1.2rem;
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    border-right: 1px solid transparentize($base-font-color, 0.6);
+    display: inline;
+    float: left;
+    padding: 0 1.2em;
+    color: $base-font-color;
+    font-size: 1.2rem;
+    font-weight: normal;
+
+    &:first-child {
+      padding-left: 0;
+      span {
+        background: $blue;
+      }
+    }
+
+    &:last-child {
+      border-right: 0;
+      span {
+        background: $red;
+      }
+    }
+  }
+
+  span {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 800;
+    line-height: 1.1em;
+    display: block;
+    color: #fff;
+    padding: 0.2em;
+    border-radius: 3px;
+    margin-top: 0.4em;
+  }
+}
+
