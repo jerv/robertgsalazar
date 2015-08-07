@@ -326,6 +326,14 @@ form {
     padding: 3rem 0 1rem 0;
     margin:0;
   }
+  &.border {
+    &.top {
+      border-top:1px solid #bbb;
+    }
+    &.bottom {
+      border-bottom:1px solid #bbb;
+    }
+  }
   a {
     display: block;
     height: 100%;
