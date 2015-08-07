@@ -70,9 +70,9 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: $blue; }
+  color: $purple; }
 a:hover {
-  color: darken($blue, 10%);
+  color: lighten($purple, 10%);
   text-decoration: none; }
 
 
@@ -205,7 +205,11 @@ label > .label-body {
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-  list-style: circle inside; }
+  list-style: circle inside;
+  &.no-style {
+    list-style-type: none;
+  }
+}
 ol {
   list-style: decimal inside; }
 ol, ul {
@@ -309,10 +313,16 @@ form {
   width: 75%;
 }
 .u-additional {
-  .col-sm-4 {
+  .col-sm-4, .col-sm-6 {
     padding:0;
+    @media (min-width:768px) {
+      box-shadow:-1px 0 #ccc;
+    }
     &:last-of-type a {
       border: none;
+    }
+    &:first-of-type {
+      box-shadow:none;
     }
   }
   .row {
