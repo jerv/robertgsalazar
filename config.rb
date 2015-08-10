@@ -38,6 +38,7 @@
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
+  activate :relative_assets
 end
 
 # Methods defined in the helpers block are available in templates
@@ -54,7 +55,6 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 # Use relative URLs
-activate :relative_assets
 activate :directory_indexes
 
 # Build-specific configuration
