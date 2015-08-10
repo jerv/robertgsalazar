@@ -54,7 +54,7 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 # Use relative URLs
-activate :relative_assets
+# activate :relative_assets
 activate :directory_indexes
 
 # Build-specific configuration
