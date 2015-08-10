@@ -11,8 +11,8 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Neuromodulation Specialist" %> | Neuromodulation Specialist</title>
 
-    <%= stylesheet_link_tag "all", :relative=> true %>
-    <%= javascript_include_tag  "all", :relative=> true %>
+    <%= stylesheet_link_tag "all" %>
+    <%= javascript_include_tag  "all" %>
 
     <!-- favicon -->
 
@@ -36,7 +36,7 @@
         <div>&nbsp;</div>
       </div>
       <div class="container">
-        <% link_to 'index', :class=>'siteid' do %>
+        <% link_to '/', :class=>'siteid' do %>
           <h2>
             Robert G. Salazar M.D.
           </h2>
