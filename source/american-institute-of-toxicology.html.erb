@@ -1,0 +1,97 @@
+---
+title: American Institute of Toxicology
+---
+
+<div class="title">
+	<div class="container">
+		<h1>American Institute of Toxicology</h1>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row padding-xl scroll-on-page">
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<aside id="scroll-on-page-top">
+				<h4>Contents:</h4>
+			  <a class="scroll-on-page-link" href="#scroll-link-1">Overview</a>
+			  <a class="scroll-on-page-link" href="#scroll-link-2">Section 2</a>
+			  <a class="scroll-on-page-link" href="#scroll-link-3">Section 3</a>
+			</aside>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-8">
+		  <article>
+		    <section>
+		      <h4 id="scroll-link-1">Overview</h4>
+		      <p>
+		      	Lorem ipsum Dolor deserunt incididunt eu ut ea elit ea eiusmod pariatur.
+		      </p>
+		    </section>
+		    <section>
+		      <h4 id="scroll-link-2">Section 2</h4>
+		      <p>
+		      	Lorem ipsum Nisi magna adipisicing adipisicing Ut fugiat consectetur sint dolor aute et tempor eiusmod sint dolor consectetur sed minim elit in enim Ut eiusmod ex incididunt Ut cupidatat non minim tempor cupidatat tempor dolor Duis Excepteur sit sunt eiusmod veniam dolore ad pariatur adipisicing sit Duis aliquip id anim elit aliqua nisi cupidatat dolore ad aute nisi officia sint cupidatat sint velit qui dolor ea laboris non id ut Ut et cupidatat sunt do do pariatur Duis amet tempor in officia magna Duis dolor Duis Ut laborum laborum id culpa magna officia cillum irure cupidatat adipisicing in in commodo dolore anim anim consectetur dolor mollit mollit sint ut dolor nulla ut voluptate non officia fugiat laboris laboris in enim velit dolor ut fugiat nostrud nulla sed incididunt eu tempor dolore consequat consectetur elit culpa minim veniam magna incididunt veniam.
+		      </p>
+		    </section>
+
+		    <section>
+		      <h4 id="scroll-link-3">Section 3</h4>
+		      <p>
+		      	Lorem ipsum Officia in Duis occaecat qui aliqua et enim pariatur dolore cillum veniam ad id qui sed ad ut reprehenderit sint eiusmod ea voluptate amet enim culpa minim sint ullamco enim nisi et incididunt ex nostrud dolore nulla minim eu occaecat.
+		      </p>
+		    </section>
+
+		    </section>
+		  </article>
+		</div>
+	</div>
+</div>
+
+<div class="u-additional">
+	<h2>More of our Specialists</h2>
+	<div class="row">
+		<div class="col-xs-12 col-sm-6">
+		  <% link_to 'johncox' do %>
+		    <h5>William J. Johncox</h5>
+		    <p>D.C., P.A.-C</p>
+		  <% end %>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+		  <% link_to 'american-institute-of-toxicology' do %>
+		    <h5>AIT Laboratories</h5>
+		    <p>phlebotomist</p>
+		  <% end %>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	(function (jQuery) {
+	  jQuery.mark = {
+	    jump: function (options) {
+	      var defaults = {
+	        selector: 'a.scroll-on-page-link'
+	      };
+	      if (typeof options == 'string') {
+	        defaults.selector = options;
+	      }
+
+	      options = jQuery.extend(defaults, options);
+	      return jQuery(options.selector).click(function (e) {
+	        var jumpobj = jQuery(this);
+	        var target = jumpobj.attr('href');
+	        var thespeed = 1000;
+	        var offset = jQuery(target).offset().top;
+	        jQuery('html,body').animate({
+	          scrollTop: offset
+	        }, thespeed, 'swing');
+	        e.preventDefault();
+	      });
+	    }
+	  };
+	})(jQuery);
+
+
+	jQuery(function(){  
+	  jQuery.mark.jump();
+	});
+</script>
