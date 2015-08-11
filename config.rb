@@ -55,6 +55,7 @@ set :images_dir, 'images'
 
 # Use relative URLs
 activate :relative_assets
+set :relative_links, true
 
 # Build-specific configuration
 configure :build do
