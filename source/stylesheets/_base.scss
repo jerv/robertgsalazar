@@ -314,6 +314,19 @@ form {
   display: block;
   width: 75%;
 }
+.u-text-center {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .u-mobile-center {
+    text-align: center;
+  }
+  .u-mobile-block-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
 .u-block {
   display: block;
   &.u-blue {

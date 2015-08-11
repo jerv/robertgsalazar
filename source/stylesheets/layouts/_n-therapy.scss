@@ -7,3 +7,19 @@
 		background-image:url("../images/location/4.jpg");
 	}
 }
+
+.icon-image {
+	width:100%;
+	max-width: 80px;
+	margin-bottom: 1em;
+	opacity: 0.4;
+	@media (min-width: 769px) {
+		display: inline-block;
+		margin-bottom: 2em;
+		& + h4 {
+			display: inline-block;
+			line-height: 80px;
+			margin:0;
+		}
+	}
+}
