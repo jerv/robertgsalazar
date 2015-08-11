@@ -1,12 +1,11 @@
-.hero {
+.hero.home {
 	h1 {
 		font-size: 3.4rem;
 		margin:0 0 15px 0;
 	}
-}
-
-.parallax-background {
-	background:url("../images/stock/cotton.jpg") repeat;
+	.parallax-background {
+		background-image:url("../images/stock/cotton.jpg");
+	}
 }
 
 .h-services {
@@ -36,7 +35,7 @@
 	@media (max-width: 844px) {
 		.images {
 			display: block;
-			max-width: 50%;
+			max-width: 500px;
 			margin: 0 auto 15px auto;
 			float: none;
 		}
@@ -48,13 +47,15 @@
 			text-align: center;
 		}
 	}
-	@media (min-width:768px) {
-		h4 {
-			margin-top: 30px;
+	h4 {
+		margin-top: 1em;
+		@media (min-width:768px) {
+			margin-top: 60px;
 		}
 	}
-	h6 {
+	p:first-of-type {
 		margin-top: 25px;
+		margin-bottom: 1em;
 		@media (min-width:768px) {
 			margin-top: 65px;
 		}

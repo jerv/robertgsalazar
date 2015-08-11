@@ -2,7 +2,7 @@
 title: Robert G. Salazar M.D. INC.
 ---
 
-<div id="js-parallax-window" class="parallax-window hero">
+<div id="js-parallax-window" class="parallax-window hero home">
 	<div class="parallax-static-content">
 		<div class="u-screen-white">
 			<div class="container">
@@ -55,9 +55,9 @@ title: Robert G. Salazar M.D. INC.
 			<p>
 				Dr. Salazar is a doctor fully committed to his patients, looking for patients who are fully committed to his efforts in keeping their wellness.
 			</p>
-			<h6 class="sans">
+			<p>
 				We are the largest pump management practice in California.
-			</h6>
+			</p>
 			<%= link_to 'Our Location', 'location', :class=>'button' %>
 		</div>
 	</div>
@@ -117,7 +117,7 @@ title: Robert G. Salazar M.D. INC.
 	    var windowInnerHeight = window.innerHeight;
 	    var plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
 	    var plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
-	    var plxSpeed = 0.35;
+	    var plxSpeed = 0.5;
 
 	    plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
 	  }

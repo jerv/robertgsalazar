@@ -102,6 +102,8 @@ input[type="button"] {
   box-sizing: border-box;
   box-shadow: 0 3px 8px rgba(0,0,0,0.05);
   transition: all 0.2s ease-out;
+  width: 100%;
+  max-width: 240px;
 }
 .button:hover,
 button:hover,
@@ -311,6 +313,21 @@ form {
   margin-right: auto;
   display: block;
   width: 75%;
+}
+.u-block {
+  display: block;
+  &.u-blue {
+    background-color: $blue;
+  }
+  &.u-red {
+    background-color: $red;
+  }
+  &.u-beige {
+    background-color: $beige;
+  }
+  &.u-black {
+    background-color: #333;
+  }
 }
 .u-additional {
   .col-sm-4, .col-sm-6 {
