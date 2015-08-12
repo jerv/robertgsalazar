@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Contact | Neuromodulation Specialist</title>
+    <title>Contact Info | Neuromodulation Specialist</title>
 
-    <link href="stylesheets/all-475746df.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/all-e9bb471d.css" rel="stylesheet" type="text/css" />
     <script src="javascripts/all-282a5917.js" type="text/javascript"></script>
 
     <!-- favicon -->
@@ -40,7 +40,7 @@
           </h2>
           <h3>Neuromodulation Specialist</h3>
 </a>        <section class="cta">
-          <h5>559-432-6807</h5>         
+          <h5 class="sans">559-432-6807</h5>         
           <a class="button" href="contact.html">Contact</a>
           <a class="button button-primary" href="patient-info.html">Become a Patient</a>
         </section>
@@ -63,7 +63,7 @@
               <a href="patient-info.html">Get Started</a>
               <ul>
                 <li><a href="patient-info.html">Patient Info</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contact.html">Contact Info</a></li>
               </ul>
             </li>
           </ul>
@@ -76,14 +76,110 @@
     -->
     <div class="title">
 	<div class="container">
-		<h1>Contact</h1>
+		<h1>Contact Info</h1>
 	</div>
 </div>
 
-<div class="container">
-	<div class="row padding-xl">
+<div class="container padding-md">
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<h4>Call now:</h4>
+			<h4 class="sans margin-sm">559-432-6807<br>Fax: 559-432-6937</h4>
+			<p>
+				7152 N Shanon 102<br>
+				Fresno, CA 93720<br>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<h4>Office Hours</h4>
+			<div class="stats">
+			  <ul>
+			    <li>8:30am - 5:00pm<span>Open</span></li>
+			    <li>12:00pm - 1:15pm<span>Closed</span></li>
+			  </ul>
+			</div>
+			<a class="button margin-sm" href="patient-info.html">Become a Patient</a>
+		</div>
 	</div>
 </div>
+
+<div id="map_canvas"></div>
+
+<div class="u-additional">
+	<h2>Additional Links</h2>
+	<div class="row">
+		<div class="col-xs-12 col-sm-4">
+<a href="neuromodulation-therapy.html">		    <h5>Services</h5>
+		    <p>More about our Therapy. and what we do</p>
+</a>		</div>
+		<div class="col-xs-12 col-sm-4">
+<a href="about.html">		    <h5>About</h5>
+		    <p>See our Specialists backgrounds.</p> 
+</a>		</div>
+		<div class="col-xs-12 col-sm-4">
+<a href="location.html">		    <h5>Location</h5>
+		    <p>Our Facility.</p>
+</a>		</div>
+	</div>
+</div>
+
+
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+  var bittersMap = (function () {
+    var myLatlng = new google.maps.LatLng(36.8402079, -119.7591867),
+        mapCenter = new google.maps.LatLng(36.8402079, -119.7591867),
+        mapCanvas = document.getElementById('map_canvas'),
+        mapOptions = {
+          center: mapCenter,
+          zoom: 16,
+          scrollwheel: false,
+          draggable: true,
+          disableDefaultUI: true,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        },
+        map = new google.maps.Map(mapCanvas, mapOptions),
+        contentString =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Robert G. Salazar M.D., Inc</h1>'+
+          '<div id="bodyContent"'+
+          '<p>Comprehensive Pain Management Center</p>'+
+          '</div>'+
+          '</div>',
+        infowindow = new google.maps.InfoWindow({
+          content: contentString,
+          maxWidth: 300
+        }),
+        marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: 'Robert G. Salazar M.D., Inc (USA)'
+        });
+
+    return {
+      init: function () {
+        map.set('styles', [{
+          featureType: 'landscape',
+          elementType: 'geometry',
+          stylers: [
+            { hue: '#ffff00' },
+            { saturation: 30 },
+            { lightness: 10}
+          ]}
+        ]);
+
+        google.maps.event.addListener(marker, 'click', function () {
+          infowindow.open(map,marker);
+        });
+      }
+    };
+  }());
+
+  bittersMap.init();
+</script>
+
     <!-- 
     FOOTER 
     ////////////////////////////////////////////////////////////////////
