@@ -210,6 +210,12 @@ ul {
   list-style: circle inside;
   &.no-style {
     list-style-type: none;
+    li {
+      display: block;
+      a {
+        display: block;
+      }
+    }
   }
 }
 ol {
@@ -342,6 +348,24 @@ form {
     background-color: #333;
   }
 }
+.u-spaced {
+  margin-top: 25px;
+  @media (min-width:768px) {
+    margin-top: 0;
+  }
+}
+.u-well {
+  display: block;
+  border-radius: 5px;
+  background-color: darken($beige, 0.8);
+  padding: 15px;
+  li:last-of-type {
+    margin-bottom: 0;
+  }
+  ul:last-of-type {
+    margin-bottom: 0;
+  }
+}
 .u-additional {
   .col-sm-4, .col-sm-6 {
     padding:0;
@@ -381,6 +405,7 @@ form {
     padding: 2.8rem 0;
     border-bottom: 1px solid #bbb;
     background-color: #fff;
+    margin-top: 1px;
     @media (min-width:768px) {
       border: none;
     }
