@@ -13,7 +13,7 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family:'Sitony', arial, sans-serif;
+  font-family:'Raleway', arial, sans-serif;
 }
 
 .title {
@@ -37,10 +37,11 @@ img {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
-  font-family:'Rufina', serif;
+  font-family:'Bitter', serif;
   font-weight: 700;
   &.sans {
-  	font-family:'Sitony', arial, sans-serif;
+  	font-family:'Raleway', arial, sans-serif;
+    font-weight: 300;
   }
 }
 h1 { font-size: 4.0rem; line-height: 1.2; }
