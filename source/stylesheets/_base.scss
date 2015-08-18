@@ -1,9 +1,9 @@
 /* Colors
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-$purple: #2E4259;
+$dark: #222;
 $red: #F7483B;
 $beige: #EDF2F2;
-$blue: #02C8FA;
+$blue: #017FA3;
 $grey: #737373;
 
 html {
@@ -18,7 +18,7 @@ body {
 
 .title {
   padding: 3em 0 1em 0;
-  background-color: $purple;
+  background-color: $blue;
   h1 {
     color: #fff;
     margin: 0;
@@ -71,9 +71,9 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: $purple; }
+  color: $dark; }
 a:hover {
-  color: lighten($purple, 10%);
+  color: lighten($dark, 10%);
   text-decoration: none; }
 
 
@@ -385,7 +385,7 @@ form {
   }
   & > h2 {
     text-align: center;
-    background-color: $purple;
+    background-color: $blue;
     color: #fff;
     font-size: 2.8rem;
     padding: 3rem 0 1rem 0;
@@ -422,15 +422,12 @@ form {
       text-decoration: none;
     }
     &:active, &:focus {
-      background-color: $purple;
-      color: #fff;
+      background-color: darken($beige, 20);
+      color: #222;
       text-decoration: none;
-      h5 {
-        color: #fff;
-      }
     }
     h5 {
-      color: $purple;
+      color: $dark;
     }
     p {
       margin-bottom: 0;
