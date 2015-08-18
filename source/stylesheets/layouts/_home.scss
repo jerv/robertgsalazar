@@ -8,6 +8,15 @@
 	}
 }
 
+.h-ethics {
+	text-align: center;
+	background-color: $dark;
+	color:#fff;
+	.button, h5 a {
+		color: #fff;
+	}
+}
+
 .h-services {
 	@media (max-width: 767px) {
 		text-align: center;
@@ -15,7 +24,7 @@
 }
 
 .h-location {
-	background: $dark;
+	background: $blue;
 	color: #fff;
 	img {
 		box-shadow: 0 3px 8px rgba(0,0,0,0.08);
@@ -67,6 +76,7 @@
 .h-about {
 	box-shadow:0 4px 12px rgba(0,0,0,0.1) inset;
 	background: $beige;
+	text-align: center;
 }
 
 .h-cta {
