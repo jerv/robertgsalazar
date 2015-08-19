@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Neuromodulation Specialist" %> | Neuromodulation Consultant</title>
+    <title><%= current_page.data.title || "Neuromodulation Specialist" %> | Pain Consultant</title>
 
     <%= stylesheet_link_tag "all" %>
     <%= javascript_include_tag  "all" %>
@@ -34,7 +34,7 @@
           <h2>
             Robert G. Salazar M.D. Inc.
           </h2>
-          <h3>Neuromodulation Consultant</h3>
+          <h3>Pain Consultant</h3>
         <% end %>
         <section class="cta">
           <h5 class="sans">559-432-6807</h5>         
@@ -46,10 +46,12 @@
         <i id="toggleMenu" class="fa fa-bars"></i>
         <div class="container">
           <ul>
+            <li><%= link_to 'Standards &amp; Ethics', 'standards-and-ethics.html' %></li>
             <li class="sub">
               <%= link_to 'Pain Management', 'pain-management.html' %>
               <ul>
-                <li><%= link_to 'Standards &amp; Ethics', 'standards-and-ethics.html' %></li>
+                <li><%= link_to 'Pharmacological Management', 'pharmacological-management.html' %></li>
+                <li><%= link_to 'Interventional Treatment', 'interventional-treatment.html' %></li>
                 <li><%= link_to 'Neuromodulation Therapy', 'neuromodulation-therapy.html' %></li>
               </ul>
             </li>
