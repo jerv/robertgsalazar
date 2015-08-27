@@ -1,0 +1,139 @@
+---
+title: Pharmacological Management 
+---
+
+<div class="title">
+	<div class="container">
+		<h1>Pharmacological Management </h1>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row padding-md">
+		<div class="col-xs-12 col-md-8">
+      <h4>Introduction</h4>
+      <p>
+      	As a condition of being a Department of Drug Enforcement (DEA) registrant, a physician who prescribes controlled substances has an obligation to take reasonable measures to prevent abuse and diversion by exercising an appropriate degree of medical supervision.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="js-parallax-window" class="parallax-window pharma hero">
+	<div class="parallax-static-content">
+		<div class="u-screen-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<h4>
+							The California Medical Board emphasizes:<br>“no pathology, no prescription “.
+						</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  <div id="js-parallax-background" class="parallax-background"></div>
+</div>
+
+<div class="container">
+	<div class="row padding-md">
+		<div class="col-xs-12 col-md-6">
+      <p>
+      	Therefore, a physician must properly determine a legitimate medical purpose for prescribing controlled substances and formulate an effective treatment plan that maximizes function. Reasonable efforts to prevent abuse and diversion are also taken to include toxicological screening (serum/urine/buccal), opioid risk profiles, pill counts and frequent utilization of California’s Drug Monitoring Prescription Program (a report can be obtained in less than one minute). Our practice emphasizes serum toxicological testing and we have an employee on site that coordinates these efforts including the randomization process. 
+      </p>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <p>
+      	A dedicated private waiting room (including a private phlebotomy room exists for the comfort of our patients. Urine testing only provides qualitative information as to whether the patient is taking the medication ordered. Serum (blood) testing provides data reflective of the actual amount of medication taken by a patient. Steady state analyses are performed on all prescribed agents. This information guides the prescribing effectively and may lead to compassionate counseling interactions.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="u-additional">
+	<h2>Additional Links</h2>
+	<div class="row">
+		<div class="col-xs-12 col-sm-4">
+		  <% link_to 'interventional-treatment.html' do %>
+		    <h5>Interventional Treatment</h5>
+		    <p>Modalities/Injections</p> 
+		  <% end %>
+		</div>
+		<div class="col-xs-12 col-sm-4">
+		  <% link_to 'patient-info.html' do %>
+		    <h5>Steady state &amp; Rational</h5>
+		    <p>For Toxicological screening.</p>
+		  <% end %>
+		</div>
+		<div class="col-xs-12 col-sm-4">
+		  <% link_to 'neuromodulation-therapy.html' do %>
+		    <h5>Neuromodulation Therapy</h5>
+		    <p>Intrathecal drug delivery device</p>
+		  <% end %>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+	  if ($("#js-parallax-window").length) {
+	    parallax();
+	  }
+	});
+
+	$(window).scroll(function(e) {
+	  if ($("#js-parallax-window").length) {
+	    parallax();
+	  }
+	});
+
+	function parallax(){
+	  if( $("#js-parallax-window").length > 0 ) {
+	    var plxBackground = $("#js-parallax-background");
+	    var plxWindow = $("#js-parallax-window");
+
+	    var plxWindowTopToPageTop = $(plxWindow).offset().top;
+	    var windowTopToPageTop = $(window).scrollTop();
+	    var plxWindowTopToWindowTop = plxWindowTopToPageTop - windowTopToPageTop;
+
+	    var plxBackgroundTopToPageTop = $(plxBackground).offset().top;
+	    var windowInnerHeight = window.innerHeight;
+	    var plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
+	    var plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
+	    var plxSpeed = 0.5;
+
+	    plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
+	  }
+	}
+
+	(function (jQuery) {
+	  jQuery.mark = {
+	    jump: function (options) {
+	      var defaults = {
+	        selector: 'a.scroll-on-page-link'
+	      };
+	      if (typeof options == 'string') {
+	        defaults.selector = options;
+	      }
+
+	      options = jQuery.extend(defaults, options);
+	      return jQuery(options.selector).click(function (e) {
+	        var jumpobj = jQuery(this);
+	        var target = jumpobj.attr('href');
+	        var thespeed = 1000;
+	        var offset = jQuery(target).offset().top;
+	        jQuery('html,body').animate({
+	          scrollTop: offset
+	        }, thespeed, 'swing');
+	        e.preventDefault();
+	      });
+	    }
+	  };
+	})(jQuery);
+
+
+	jQuery(function(){  
+	  jQuery.mark.jump();
+	});
+</script>

@@ -1,0 +1,20 @@
+.hero.neuro {
+	h1 {
+		font-size: 3.4rem;
+		margin:0 0 15px 0;
+	}
+	.parallax-background {
+		background-image:url("../images/location/4.jpg");
+	}
+}
+
+.hero.pharma {
+	@extend .hero.neuro;
+	.parallax-static-content {
+		padding: 4em 0;	
+	}
+	.parallax-background {
+		background-image:url("../images/location/3.jpg");
+	}
+}
+
