@@ -6,6 +6,10 @@ $beige: #EDF2F2;
 $blue: #017FA3;
 $grey: #737373;
 
+*:focus {
+  outline: none !important;
+}
+
 html {
   font-size: 62.5%; 
 }
@@ -454,7 +458,6 @@ form {
     padding: 2.8rem 0;
     border-bottom: 1px solid #bbb;
     background-color: #fff;
-    margin-top: 1px;
     @media (min-width:768px) {
       border: none;
     }
@@ -489,4 +492,17 @@ form {
 
 .u-max-640 {
   max-width: 640px;
+}
+
+.u-gallery {
+  img {
+    transition: opacity 0.2s ease-out;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8 !important;
+    }
+    &:focus {
+      border: none;
+    }
+  }
 }

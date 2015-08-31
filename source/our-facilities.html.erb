@@ -2,81 +2,88 @@
 title: Our Facilities
 ---
 
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css"/>
+
 <div class="title">
 	<div class="container">
 		<h1>Our Facilities</h1>
 	</div>
 </div>
 
-<div id="map_canvas"></div>
+<div class="u-gallery">
+  <div><%= image_tag 'location/1-s.jpg', :'data-lazy'=>'images/location/1-s.jpg' %></div>
+  <div><%= image_tag 'location/2-s.jpg', :'data-lazy'=>'images/location/2-s.jpg' %></div>
+  <div><%= image_tag 'location/3-s.jpg', :'data-lazy'=>'images/location/3-s.jpg' %></div>
+  <div><%= image_tag 'location/4-s.jpg', :'data-lazy'=>'images/location/4-s.jpg' %></div>
+  <div><%= image_tag 'location/5-s.jpg', :'data-lazy'=>'images/location/5-s.jpg' %></div>
+  <div><%= image_tag 'location/6-s.jpg', :'data-lazy'=>'images/location/6-s.jpg' %></div>
+  <div><%= image_tag 'location/7-s.jpg', :'data-lazy'=>'images/location/7-s.jpg' %></div>
+  <div><%= image_tag 'location/8-s.jpg', :'data-lazy'=>'images/location/8-s.jpg' %></div>
+</div>
+
+<div class="u-additional">
+  <h2>Map</h2>
+  <div id="map_canvas"></div>
+</div>
 
 <div class="container padding-md">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-2">
+    <div class="col-xs-12 col-sm-6">
       <h4>Office Hours</h4>
       <div class="stats">
         <ul>
           <li>8:30am - 5:00pm<span>Open</span></li>
-          <li>12:00pm - 1:15pm<span>Closed</span></li>
+          <li>12:00pm - 2:00pm<span>Phone availability limited</span></li>
         </ul>
       </div>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 u-spaced">
-      <h4>Office Address</h4>
+      <br>
+      <label>Main Offfice:</label>
       <p>
-        7152 North Sharon Avenue Suite 102<br>Fresno CA 93720
+        559-432-6807<br>
       </p>
+      <label>Comprehensive Pain Management Center:</label>
+      <p>
+        559-432-6807
+      </p>
+    </div>
+    <div class="col-xs-12 col-sm-6 u-spaced">
+      <h4>Our Address</h4>
+      <h6>
+        7152 North Sharon Avenue Suite 102<br>Fresno CA 93720
+      </h6>
     </div>
   </div>
 </div>
 
-<div class="container padding-md">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-2">
-      <h4>C.P.M.C. Hours</h4>
-      <div class="stats">
-        <ul>
-          <li>8:30am - 5:00pm<span>Open</span></li>
-          <li>12:00pm - 1:15pm<span>Closed</span></li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 u-spaced">
-      <h4>C.P.M.C. Address</h4>
-      <p>
-        7152 North Sharon Avenue Suite 102<br>Fresno CA 93720
-      </p>
-    </div>
-  </div>
-</div>
-
-<div class="u-additional">
-	<h2>Additional Links</h2>
-	<div class="row">
-		<div class="col-xs-12 col-sm-4">
-		  <% link_to 'neuromodulation-therapy.html' do %>
-		    <h5>Services</h5>
-		    <p>More about our Therapy. and what we do</p>
-		  <% end %>
-		</div>
-		<div class="col-xs-12 col-sm-4">
-		  <% link_to 'about.html' do %>
-		    <h5>About</h5>
-		    <p>See our Specialists backgrounds.</p> 
-		  <% end %>
-		</div>
-		<div class="col-xs-12 col-sm-4">
-		  <% link_to 'patient-info.html' do %>
-		    <h5>Get Started</h5>
-		    <p>Become a patient.</p>
-		  <% end %>
-		</div>
-	</div>
-</div>
-
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js"></script>
-<script>
+<script type="text/javascript">
+
+  $('.u-gallery').slick({
+    centerMode: true,
+    slidesToShow: 3,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    lazyLoad: 'ondemand',
+    focusOnSelect: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
   var bittersMap = (function () {
     var myLatlng = new google.maps.LatLng(36.8402079, -119.7591867),
         mapCenter = new google.maps.LatLng(36.8402079, -119.7591867),
