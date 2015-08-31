@@ -75,9 +75,9 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: $blue; }
+  color: darken($blue, 10%); }
 a:hover {
-  color: lighten($blue, 10%);
+  color: $blue;
   text-decoration: none; }
 
 
@@ -333,6 +333,8 @@ form {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .u-quote {
   text-indent: 1.4em;
+}
+.u-i {
   font-style: italic;
 }
 .u-full-width {
