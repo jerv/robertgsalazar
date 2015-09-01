@@ -2,7 +2,7 @@
 title: Our Facilities
 ---
 
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css"/>
+<!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css"/> -->
 
 <div class="title">
 	<div class="container">
@@ -10,7 +10,71 @@ title: Our Facilities
 	</div>
 </div>
 
-<div class="u-gallery">
+<div class="container padding-md">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <h4>Main Office</h4>
+      <p>
+        7152 N. Sharon Suite 102<br>Fresno, CA 93720<br>
+      </p>
+      <h5>559-432-6807</h5>
+      <div class="stats">
+        <ul>
+          <li>8:30am - 5:00pm<span>Open</span></li>
+          <li>12:00pm - 2:00pm<span>Limited Phone Availability</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-3">
+      <%= image_tag 'location/5-s.jpg', :class=>'margin-xs' %>
+    </div>
+    <div class="col-xs-12 col-md-3">
+      <%= image_tag 'location/3-s.jpg', :class=>'margin-xs' %>
+    </div>
+  </div>
+</div>
+
+<div class="u-block u-beige">
+  <div class="container padding-md">
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <h4 class="margin-none">Billing Office</h4>
+        <h6>(Suite 109)</h6>
+        <br>
+        <p class="margin-none">
+          We also have billing and transcription all "in-house."
+        </p>
+        <h5 class="margin-none">559-436-3495.</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container padding-md">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <h4 class="margin-none">Comprehensive Pain Management Center</h4>
+      <h6>(Suite 104)</h6>
+      <br>
+      <p>
+        We currently occupy a 12,000 sq. foot building which includes a 4,000 sq. foot surgical center (exclusively dedicated to interventional pain procedures.)
+      </p>
+    </div>
+    <div class="col-xs-12 col-md-3">
+      <%= image_tag 'location/6-s.jpg' %>
+    </div>
+    <div class="col-xs-12 col-md-3">
+      <%= image_tag 'location/7-s.jpg' %>
+    </div>
+  </div>
+</div>
+
+<div class="u-additional">
+  <h2>Map</h2>
+  <div id="map_canvas"></div>
+</div>
+
+<!-- <div class="u-gallery">
   <div><%= image_tag 'location/1-s.jpg', :'data-lazy'=>'images/location/1-s.jpg' %></div>
   <div><%= image_tag 'location/2-s.jpg', :'data-lazy'=>'images/location/2-s.jpg' %></div>
   <div><%= image_tag 'location/3-s.jpg', :'data-lazy'=>'images/location/3-s.jpg' %></div>
@@ -19,48 +83,14 @@ title: Our Facilities
   <div><%= image_tag 'location/6-s.jpg', :'data-lazy'=>'images/location/6-s.jpg' %></div>
   <div><%= image_tag 'location/7-s.jpg', :'data-lazy'=>'images/location/7-s.jpg' %></div>
   <div><%= image_tag 'location/8-s.jpg', :'data-lazy'=>'images/location/8-s.jpg' %></div>
-</div>
+</div> -->
 
-<div class="u-additional">
-  <h2>Map</h2>
-  <div id="map_canvas"></div>
-</div>
-
-<div class="container padding-md">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6">
-      <h4>Office Hours</h4>
-      <div class="stats">
-        <ul>
-          <li>8:30am - 5:00pm<span>Open</span></li>
-          <li>12:00pm - 2:00pm<span>Phone availability limited</span></li>
-        </ul>
-      </div>
-      <br>
-      <label>Main Offfice:</label>
-      <p>
-        559-432-6807<br>
-      </p>
-      <label>Comprehensive Pain Management Center:</label>
-      <p>
-        559-447-4898
-      </p>
-    </div>
-    <div class="col-xs-12 col-sm-6 u-spaced">
-      <h4>Our Address</h4>
-      <h6>
-        7152 North Sharon Avenue Suite 102<br>Fresno CA 93720
-      </h6>
-    </div>
-  </div>
-</div>
-
-<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
+<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script> -->
 
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script type="text/javascript">
 
-  $('.u-gallery').slick({
+  /*$('.u-gallery').slick({
     centerMode: true,
     slidesToShow: 3,
     autoplay: true,
@@ -82,7 +112,7 @@ title: Our Facilities
         }
       }
     ]
-  });
+  });*/
 
   var bittersMap = (function () {
     var myLatlng = new google.maps.LatLng(36.8402079, -119.7591867),
