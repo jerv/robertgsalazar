@@ -244,6 +244,12 @@ ul {
       }
     }
   }
+  &.number-style {
+    list-style-type: decimal;
+    li {
+      display: block;
+    }
+  }
 }
 ol {
   list-style: decimal inside; }
@@ -497,6 +503,7 @@ form {
 }
 
 .u-gallery {
+  height: 450px;
   img {
     transition: opacity 0.2s ease-out;
     cursor: pointer;
@@ -506,5 +513,29 @@ form {
     &:focus {
       border: none;
     }
+  }
+}
+
+$u-divider-color: #ccc;
+$u-spacing: 50px;
+$u-spacing-sm: 15px;
+$u-spacing-lg: 80px;
+.u-divider {
+  display: block;
+  width: 100%;
+  height:1px;
+  background-color:$u-divider-color;
+  margin: $u-spacing 0;
+  &.u-divider.spacing-sm {
+    margin: $u-spacing-sm 0;
+  }
+  &.u-divider.spacing-lg {
+    margin: $u-spacing-lg 0;
+  }
+  &.u-divider.spacing-none {
+    margin: 0;
+  }
+  &.invisible {
+    background:none;
   }
 }
