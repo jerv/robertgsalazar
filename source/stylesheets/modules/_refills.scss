@@ -178,6 +178,13 @@ $parallax-background-height: $parallax-window-height * 2;
       
     }
 
+    h6 {
+      display: inline-block;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin:0;
+    }
+
     p {
       color: $base-font-color;
       line-height: $base-line-height;
