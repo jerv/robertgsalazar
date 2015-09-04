@@ -237,6 +237,14 @@ ul {
   list-style: circle;
   &.no-style {
     list-style-type: none;
+    &.white {
+      a {
+        color: rgba(250,250,250,0.7);
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
     li {
       display: block;
       a {
