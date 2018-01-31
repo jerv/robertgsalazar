@@ -57,6 +57,11 @@ set :images_dir, 'images'
 activate :relative_assets
 set :relative_links, true
 
+# Assumes the file source/about/template.html.erb exists
+["tom", "dick", "harry"].each do |name|
+  proxy "/layouts/#{name}.html", "/layouts/doctor.html", :locals => { :person_name => name }, :ignore => true
+end
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
