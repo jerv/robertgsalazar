@@ -24,7 +24,7 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - label: "Pharma Page"
         name: "pharma"
-        file: "content/pharma.html"
+        file: "content/pharma.yml"
         fields:
           - {label: Intro, name: intro, widget: markdown}
           - {label: Left Paragraph, name: left-para, widget: markdown}
