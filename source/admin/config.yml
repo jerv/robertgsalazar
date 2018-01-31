@@ -9,7 +9,7 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 
 collections: # A list of collections the CMS should be able to edit
   - name: "doctor" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Doctors" # Used in the UI, ie.: "New Post"
+    label: "Doctor" # Used in the UI, ie.: "New Post"
     folder: "content/doctors"
     slug: "{{slug}}"
     # extension: "html"
@@ -19,3 +19,25 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Bio", name: "bio", widget: "markdown"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "Doctor"}
+  - label: "Pain Pages"
+    name: "pain-pages"
+    files:
+      - label: "Pharma Page"
+        name: "pharma"
+        file: "content/pharma.html"
+        fields:
+          - {label: Intro, name: intro, widget: markdown}
+          - {label: Left Paragraph, name: left-para, widget: markdown}
+          - {label: Right Paragraph, name: right-para, widget: markdown}
+      # - label: "Locations Page"
+      #   name: "locations"
+      #   file: "site/content/locations.yml"
+      #   fields:
+      #     - {label: Title, name: title, widget: string}
+      #     - {label: Intro, name: intro, widget: markdown}
+      #     - label: Locations
+      #       name: locations
+      #       widget: list
+      #       fields:
+      #         - {label: Name, name: name, widget: string}
+      #         - {label: Address, name: address, widget: string}
