@@ -8,14 +8,14 @@ media_folder: "static/images/uploads" # Media files will be stored in the repo u
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "doctors" # Used in routes, ie.: /admin/collections/:slug/edit
+  - name: "doctor" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Doctors" # Used in the UI, ie.: "New Post"
-    folder: "doctors/doctor"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    extension: "html"
-    format: "frontmatter"
+    folder: "content/doctors"
+    slug: "{{slug}}"
+    # extension: "html"
+    # format: "frontmatter"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Bio", name: "bio", widget: "markdown"}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "doctor"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "Doctor"}
