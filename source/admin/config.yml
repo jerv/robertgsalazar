@@ -11,7 +11,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: "doctors" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Doctors" # Used in the UI, ie.: "New Post"
     folder: "doctors/doctor"
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     extension: "html"
     format: "frontmatter"
     create: true # Allow users to create new documents in this collection
