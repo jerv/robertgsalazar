@@ -12,19 +12,20 @@ collections: # A list of collections the CMS should be able to edit
     label: "Doctor" # Used in the UI, ie.: "New Post"
     folder: "content/doctors"
     slug: "{{slug}}"
-    # extension: "yml"
-    # format: "yml"
+    extension: "html"
+    format: "yaml-frontmatter"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Bio", name: "bio", widget: "markdown"}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "Doctor"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "doctor"}
+      - {label: "Draft", name: "published", widget: "hidden", default: "false"}
   - label: "Pain Pages"
     name: "pain-pages"
     files:
       - label: "Pharma Page"
         name: "pharma"
-        file: "content/pharma.yml"
+        file: "content/pharma.html"
         fields:
           - {label: Intro, name: intro, widget: markdown}
           - {label: Left Paragraph, name: left-para, widget: markdown}
