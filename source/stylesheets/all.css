@@ -2488,6 +2488,12 @@ form {
   margin-top: 20px;
   margin-bottom: 20px; }
 
+.clear-top {
+  margin-top: 0 !important; }
+
+.clear-bottom {
+  margin-bottom: 0 !important; }
+
 .margin-none {
   margin-top: 0;
   margin-bottom: 0; }

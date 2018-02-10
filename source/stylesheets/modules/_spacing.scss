@@ -10,6 +10,12 @@ $default-padding: 20px;
 [class|="margin"] {
 	margin-top: $default-margin; margin-bottom: $default-margin;
 }
+.clear-top {
+	margin-top: 0 !important;
+}
+.clear-bottom {
+	margin-bottom: 0 !important;
+}
 .margin-none {
 	margin-top: 0; margin-bottom: 0;
 }
